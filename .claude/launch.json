@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "msb-prototype",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "5173"],
+      "port": 5173,
+      "cwd": "C:\\Users\\jndo_zenbook\\Documents\\magic-school-bus-prototype"
+    }
+  ]
+}
