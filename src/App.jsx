@@ -26,6 +26,7 @@ import { ApprovalConfirmed } from '@/pages/admin/ApprovalConfirmed'
 import { SuperAdminDashboard } from '@/pages/admin/SuperAdminDashboard'
 import { GuardianGrantReview } from '@/pages/admin/GuardianGrantReview'
 import { OperatorPendingDetail } from '@/pages/admin/OperatorPendingDetail'
+import { SchoolPendingDetail } from '@/pages/admin/SchoolPendingDetail'
 
 export default function App() {
   return (
@@ -59,6 +60,7 @@ export default function App() {
           <Route path="/admin/super" element={<SuperAdminDashboard />} />
           <Route path="/admin/guardian-grants/:id" element={<GuardianGrantReview />} />
           <Route path="/admin/operators/:id" element={<OperatorPendingDetail />} />
+          <Route path="/admin/schools/:id" element={<SchoolPendingDetail />} />
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
