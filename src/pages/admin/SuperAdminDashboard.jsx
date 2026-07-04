@@ -3,18 +3,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { AdminBottomNav } from '@/components/BottomNav'
-import { Bus, ChevronRight, AlertTriangle, CheckCircle2, Clock, School } from 'lucide-react'
-
-const SCHOOLS = [
-  {
-    id: 'school-1',
-    name: 'Maliwanag Elementary School',
-    depedId: '300175',
-    city: 'Quezon City',
-    status: 'pending',
-    submitted: 'Jul 4, 2026',
-  },
-]
+import { Bus, ChevronRight, AlertTriangle, CheckCircle2, Clock } from 'lucide-react'
 
 const OPERATORS = [
   {
@@ -74,49 +63,6 @@ export function SuperAdminDashboard() {
       </div>
 
       <div className="flex-1 px-4 py-5 flex flex-col gap-4">
-
-        {/* Schools section */}
-        <div>
-          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
-            Schools
-          </p>
-          <div className="flex flex-col gap-3">
-            {SCHOOLS.map((school) => (
-              <Card key={school.id} className="border-amber-200">
-                <CardContent className="pt-4 pb-4">
-                  <button
-                    className="w-full flex items-start gap-3 text-left"
-                    onClick={() => navigate(`/admin/schools/${school.id}`)}
-                  >
-                    <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center shrink-0">
-                      <Clock className="h-5 w-5 text-amber-600" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between gap-2">
-                        <p className="text-sm font-semibold leading-tight">{school.name}</p>
-                        <Badge variant="warning" className="text-xs shrink-0">Pending</Badge>
-                      </div>
-                      <p className="text-xs text-muted-foreground mt-0.5">
-                        DepEd ID · {school.depedId} · {school.city}
-                      </p>
-                      <p className="text-xs text-muted-foreground mt-0.5">
-                        Submitted {school.submitted}
-                      </p>
-                    </div>
-                    <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0 mt-1" />
-                  </button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Operators section */}
-        <div>
-          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
-            Operators
-          </p>
-        </div>
 
         {/* Summary */}
         <div className="grid grid-cols-3 gap-2 text-center">
